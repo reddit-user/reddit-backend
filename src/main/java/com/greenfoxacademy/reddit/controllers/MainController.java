@@ -14,7 +14,7 @@ public class MainController {
 
   @RequestMapping("/")
   public String index() {
-    return "redirect:http://localhost:8080";
+    return "redirect:https://github.com/greenfox-academy/teaching-materials/blob/master/project/reddit/apispec.md";
   }
 
 }
