@@ -19,7 +19,7 @@ public class PostsController {
   PostsService postsService;
 
   @GetMapping("/posts")
-  public Iterable<Post> getPosts(@RequestHeader("Username", required = false) String user) {
+  public Iterable<Post> getPosts(@RequestHeader(value = "Username", required = false) String user) {
     return postsService.getPosts(user);
   }
 
