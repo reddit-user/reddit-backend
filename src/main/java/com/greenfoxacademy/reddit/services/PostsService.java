@@ -25,8 +25,10 @@ public class PostsService {
 
   public Iterable<Post> getPosts(String user) {
     Iterable<Post> posts = postRepository.findAll();
-    for (Post p : posts) {
-      p = updateVote(user, p);
+    if(user != null){
+      for (Post p : posts) {
+        p = updateVote(user, p);
+      }
     }
     return posts;
   }
